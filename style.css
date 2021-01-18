@@ -1,31 +1,21 @@
-/*GENERAL*/
-
-*, ::before, ::after 
-{
+*, ::before, ::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-body 
-{
+body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-h1
-{
-    font-family: Russo One, arial;
+h1 {
+    font-family: Russo One, Arial;
     font-weight: lighter;
     letter-spacing: 2px;
     text-align: center;
     padding: 30px 0;
     font-size: 40px;
 }
-
-/*GENERAL AND*/
-
-/*CE CODE NOTRE FORMULAIRE */
-
 .container-global {
     width: 70%;
     max-width: 800px;
@@ -33,34 +23,28 @@ h1
     height: auto;
     /* background: pink; */
 }
-.question-block
-{
-    background: turquoise;
+.question-block {
     padding: 15px 25px 25px;
-    margin: 25px;
+    margin: 20px;
     border-radius: 5px;
-    box-shadow: 0 2px 10px rgb(0,0,0,1);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
 }
 
-.question-block h4
-{
+.question-block h4 {
     padding: 10px 0;
     font-size: 22px;
+}
 
-}   
-
-.question-block label
-{
+.question-block label {
     font-size: 20px;
 }
 
-.question-block input[type="radio"]
-{
-    font-size: 20px;
+.question-block input[type='radio'] {
     transform: scale(1.8);
-    margin: 20px;
+    margin: 10px;
 }
- .resultats {
+
+.resultats {
     padding: 25px;
     margin: 10px 0px 70px;
     border-radius: 5px;
@@ -91,4 +75,27 @@ form button {
     cursor: pointer;
     font-size: 25px;
     transition: background-color 0.2s ease-in-out;
-} 
+}
+
+form button:hover {
+    background-color: lightblue;
+}
+
+.echec {
+    animation: echec 0.3s ease-in-out;
+}
+
+@keyframes echec {
+    0% {
+        transform: translateX(0px);
+    }
+    33% {
+        transform: translateX(5px);
+    }
+    66% {
+        transform: translateX(-5px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
